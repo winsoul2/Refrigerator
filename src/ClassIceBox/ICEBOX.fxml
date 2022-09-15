@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.241" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClassIceBox.Controller">
+   <children>
+      <GridPane alignment="center" hgap="10" prefHeight="464.0" prefWidth="776.0" vgap="10">
+         <children>
+            <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="864.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+               <tabs>
+                  <Tab text="ใส่อาหารช่องเเช่งเย็น">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #bffff4;">
+                           <children>
+                              <ImageView fitHeight="192.0" fitWidth="213.0" layoutX="393.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                              <AnchorPane prefHeight="405.0" prefWidth="567.0">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="14.0" prefHeight="47.0" prefWidth="77.0" text="ชื่อของ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="NameTextField" layoutX="105.0" layoutY="23.0" prefHeight="37.0" prefWidth="184.0" />
+                                    <Label layoutX="21.0" layoutY="75.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="118.0" prefHeight="35.0" prefWidth="142.0" text="ปริมาณอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AmountTextField" layoutX="181.0" layoutY="121.0" prefHeight="30.0" prefWidth="179.0" />
+                                    <Label layoutX="23.0" layoutY="203.0" prefHeight="35.0" prefWidth="120.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="Day" layoutX="184.0" layoutY="206.0" prefHeight="28.0" prefWidth="174.0" />
+                                    <Button layoutX="73.0" layoutY="308.0" mnemonicParsing="false" onAction="#AddFood" prefHeight="43.0" prefWidth="90.0" text="เพิ่ม">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button layoutX="213.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleClearButton" prefHeight="46.0" prefWidth="91.0" text="Clear">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button fx:id="addpic1" disable="true" layoutX="316.0" layoutY="22.0" mnemonicParsing="false" onAction="#handle" opacity="0.0" prefHeight="39.0" prefWidth="75.0" text="เพิ่มรูป">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Label layoutX="21.0" layoutY="161.0" prefHeight="35.0" prefWidth="172.0" text="หน่วยของอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="unitTextField" layoutX="182.0" layoutY="162.0" prefHeight="33.0" prefWidth="177.0" />
+                                    <Label layoutX="25.0" layoutY="246.0" prefHeight="35.0" prefWidth="120.0" text="ช่องอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxUnit" layoutX="184.0" layoutY="80.0" prefWidth="150.0" promptText="Selet " />
+                                    <ComboBox fx:id="comboBoxSlot" layoutX="184.0" layoutY="251.0" prefWidth="150.0" promptText="Selet" />
+                                    <Label fx:id="NotIn" layoutX="107.0" layoutY="360.0" opacity="0.0" prefHeight="49.0" prefWidth="181.0" text="ไม่สามารถใส่ได้" textFill="RED">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="221.0" fitWidth="324.0" layoutX="448.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Profile/5296ed65689fafb6797e453c62973d9a.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="Back1" layoutX="763.0" layoutY="475.0" mnemonicParsing="false" onAction="#Back1" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                              <ImageView fx:id="Image1" fitHeight="37.0" fitWidth="83.0" layoutX="730.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="ใส่อาหารช่องเเช่เเข็ง">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8ffd4;">
+                           <children>
+                              <ImageView fitHeight="192.0" fitWidth="213.0" layoutX="393.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+                              <AnchorPane prefHeight="405.0" prefWidth="567.0">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="14.0" prefHeight="47.0" prefWidth="77.0" text="ชื่อของ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="NameTextFieldCold" layoutX="105.0" layoutY="23.0" prefHeight="37.0" prefWidth="184.0" />
+                                    <Label layoutX="21.0" layoutY="75.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="21.0" layoutY="118.0" prefHeight="35.0" prefWidth="142.0" text="ปริมาณอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="AmountTextFieldCold" layoutX="181.0" layoutY="121.0" prefHeight="30.0" prefWidth="179.0" />
+                                    <Label layoutX="23.0" layoutY="203.0" prefHeight="35.0" prefWidth="120.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="83.0" layoutY="298.0" mnemonicParsing="false" onAction="#AddFoodCold" prefHeight="43.0" prefWidth="90.0" text="เพิ่ม">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="212.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleClearButtonCold" prefHeight="46.0" prefWidth="91.0" text="Clear">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="addpic2" disable="true" layoutX="316.0" layoutY="22.0" mnemonicParsing="false" onAction="#handle" opacity="0.0" prefHeight="39.0" prefWidth="75.0" text="เพิ่มรูป">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="21.0" layoutY="161.0" prefHeight="35.0" prefWidth="172.0" text="หน่วยของอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="unitTextFieldCold" layoutX="182.0" layoutY="162.0" prefHeight="33.0" prefWidth="177.0" />
+                                    <ImageView fx:id="Image2" fitHeight="177.0" fitWidth="200.0" layoutX="426.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="25.0" layoutY="246.0" prefHeight="35.0" prefWidth="120.0" text="ช่องอาหาร">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="comboBoxUnitCold" layoutX="183.0" layoutY="80.0" prefWidth="150.0" promptText="Selet" />
+                                    <ComboBox fx:id="comboBoxSlotCold" layoutX="183.0" layoutY="251.0" prefWidth="150.0" promptText="Selet" />
+                                    <DatePicker fx:id="DayCold" layoutX="184.0" layoutY="208.0" />
+                                    <Label fx:id="NotInCold" layoutX="107.0" layoutY="367.0" opacity="0.0" prefHeight="49.0" prefWidth="181.0" text="ไม่สามารถใส่ได้" textFill="RED">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="203.0" fitWidth="329.0" layoutX="449.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Profile/7831174de6bee2f6b2dc47cf14e3122d.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="Back2" layoutX="763.0" layoutY="475.0" mnemonicParsing="false" onAction="#Back2" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="ช่องเก็บของเเช่เย็น">
+                     <content>
+                        <AnchorPane prefHeight="562.0" prefWidth="910.0">
+                           <children>
+                              <AnchorPane prefHeight="524.0" prefWidth="870.0" style="-fx-background-color: #bffff4;">
+                                 <children>
+                                    <Label fx:id="Exp1" layoutX="18.0" layoutY="187.0" prefHeight="35.0" prefWidth="194.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Time1" layoutX="21.0" layoutY="111.0" prefHeight="37.0" prefWidth="219.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type1" layoutX="17.0" layoutY="74.0" prefHeight="39.0" prefWidth="211.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type2" layoutX="298.0" layoutY="76.0" prefHeight="34.0" prefWidth="259.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Exp2" layoutX="301.0" layoutY="191.0" prefHeight="27.0" prefWidth="188.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Time2" layoutX="292.0" layoutY="117.0" prefHeight="26.0" prefWidth="250.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="pic1" fitHeight="38.0" fitWidth="52.0" layoutX="15.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="Unit1" layoutX="17.0" layoutY="152.0" prefHeight="34.0" prefWidth="212.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Unit2" layoutX="300.0" layoutY="153.0" prefHeight="32.0" prefWidth="253.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type3" layoutX="585.0" layoutY="77.0" prefHeight="32.0" prefWidth="220.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type4" layoutX="22.0" layoutY="296.0" prefHeight="36.0" prefWidth="201.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="pic2" fitHeight="22.0" fitWidth="23.0" layoutX="509.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="Time3" layoutX="585.0" layoutY="115.0" prefHeight="29.0" prefWidth="249.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Unit3" layoutX="585.0" layoutY="154.0" prefHeight="30.0" prefWidth="227.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Exp3" layoutX="585.0" layoutY="190.0" prefHeight="29.0" prefWidth="214.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="pic3" fitHeight="23.0" fitWidth="30.0" layoutX="820.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="pic4" fitHeight="22.0" fitWidth="24.0" layoutX="181.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label fx:id="Time4" layoutX="18.0" layoutY="348.0" prefHeight="36.0" prefWidth="224.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Unit4" layoutX="22.0" layoutY="388.0" prefHeight="40.0" prefWidth="186.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Exp4" layoutX="20.0" layoutY="426.0" prefHeight="34.0" prefWidth="191.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type5" layoutX="295.0" layoutY="297.0" prefHeight="36.0" prefWidth="226.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Time5" layoutX="298.0" layoutY="352.0" prefHeight="31.0" prefWidth="238.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Unit5" layoutX="299.0" layoutY="390.0" prefHeight="38.0" prefWidth="217.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Exp5" layoutX="294.0" layoutY="426.0" prefHeight="34.0" prefWidth="228.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Type6" layoutX="581.0" layoutY="297.0" prefHeight="34.0" prefWidth="220.0" text="ประเภทอาหาร">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Time6" layoutX="582.0" layoutY="348.0" prefHeight="38.0" prefWidth="254.0" text="เวลาอาหารอยู่ในตู้">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Unit6" layoutX="581.0" layoutY="393.0" prefHeight="31.0" prefWidth="221.0" text="ปริมาณ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Exp6" layoutX="582.0" layoutY="425.0" prefHeight="36.0" prefWidth="218.0" text="วันหมดอายุ">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fx:id="pic5" fitHeight="32.0" fitWidth="43.0" layoutX="481.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="pic6" fitHeight="31.0" fitWidth="36.0" layoutX="806.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="Back3" layoutX="748.0" layoutY="465.0" mnemonicParsing="false" onAction="#Back3" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                                    <Label fx:id="Name1" layoutX="20.0" layoutY="11.0" prefHeight="37.0" prefWidth="175.0" text="1">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Name2" layoutX="301.0" layoutY="14.0" prefHeight="30.0" prefWidth="149.0" text="2">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Name4" layoutX="18.0" layoutY="245.0" prefHeight="41.0" prefWidth="178.0" text="4">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Name5" layoutX="299.0" layoutY="247.0" prefHeight="39.0" prefWidth="180.0" text="5">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Name3" layoutX="583.0" layoutY="14.0" prefHeight="30.0" prefWidth="181.0" text="3">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="Name6" layoutX="581.0" layoutY="243.0" prefHeight="38.0" prefWidth="184.0" text="6">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="762.0" layoutX="108.0" layoutY="239.0" startX="-108.0" />
+                                    <Line endX="5.0" endY="522.0" layoutX="281.0" layoutY="14.0" startX="5.0" startY="-87.0" />
+                                    <Line endX="5.0" endY="522.0" layoutX="567.0" layoutY="32.0" startX="5.0" startY="-87.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="ช่องเก็บของเเช่เเข็ง">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8ffd4;">
+                           <children>
+                              <Label fx:id="ExpCold1" layoutX="45.0" layoutY="347.0" prefHeight="39.0" prefWidth="270.0" text="วันหมดอายุ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="TimeCold1" layoutX="50.0" layoutY="221.0" prefHeight="41.0" prefWidth="269.0" text="เวลาอาหารอยู่ในตู้">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="TypeCold1" layoutX="49.0" layoutY="161.0" prefHeight="35.0" prefWidth="235.0" text="ประเภทอาหาร">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="TypeCold2" layoutX="430.0" layoutY="160.0" prefHeight="37.0" prefWidth="256.0" text="ประเภทอาหาร">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ExpCold2" layoutX="427.0" layoutY="347.0" prefHeight="40.0" prefWidth="261.0" text="วันหมดอายุ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="TimeCold2" layoutX="432.0" layoutY="224.0" prefHeight="36.0" prefWidth="283.0" text="เวลาอาหารอยู่ในตู้">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="piccold1" fitHeight="30.0" fitWidth="28.0" layoutX="118.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="piccold2" fitHeight="25.0" fitWidth="33.0" layoutX="487.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label fx:id="UnitCold1" layoutX="50.0" layoutY="285.0" prefHeight="33.0" prefWidth="256.0" text="ปริมาณ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="UnitCold2" layoutX="427.0" layoutY="285.0" prefHeight="33.0" prefWidth="238.0" text="ปริมาณ">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="Back4" layoutX="763.0" layoutY="475.0" mnemonicParsing="false" onAction="#Back4" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                              <Label fx:id="NameCold1" layoutX="49.0" layoutY="97.0" prefHeight="30.0" prefWidth="272.0" text="1">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="NameCold2" layoutX="432.0" layoutY="97.0" prefHeight="30.0" prefWidth="252.0" text="2">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-38.0" endY="473.0" layoutX="456.0" layoutY="51.0" startX="-38.0" startY="-51.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="หยิบอาหารออก">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #b8ffba;">
+                           <children>
+                              <Label layoutX="45.0" layoutY="113.0" prefHeight="27.0" prefWidth="117.0" text="ช่องอาหาร">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="Out1" layoutX="181.0" layoutY="283.0" mnemonicParsing="false" onAction="#Out1" prefHeight="25.0" prefWidth="78.0" text="เอาออก">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Button>
+                              <Label layoutX="135.0" layoutY="43.0" text="ช่องเเช่เย็น">
+                                 <font>
+                                    <Font name="Angsana New" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="602.0" layoutY="43.0" prefHeight="43.0" prefWidth="97.0" text="ช่องเเช่เเข็ง">
+                                 <font>
+                                    <Font name="Angsana New" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="450.0" layoutY="113.0" prefHeight="27.0" prefWidth="117.0" text="ช่องอาหาร">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="Out2" layoutX="602.0" layoutY="283.0" mnemonicParsing="false" onAction="#Out2" prefHeight="25.0" prefWidth="78.0" text="เอาออก">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox fx:id="comboBoxOut1" layoutX="177.0" layoutY="107.0" onAction="#selectout1" prefHeight="32.0" prefWidth="178.0" promptText="Selet" />
+                              <ComboBox fx:id="comboBoxOutCold1" layoutX="572.0" layoutY="111.0" onAction="#selectout2" prefHeight="32.0" prefWidth="178.0" promptText="Selet" />
+                              <Button fx:id="Back5" layoutX="763.0" layoutY="475.0" mnemonicParsing="false" onAction="#Back5" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                              <ComboBox fx:id="comboBoxOut2" layoutX="177.0" layoutY="195.0" prefHeight="32.0" prefWidth="178.0" promptText="Selet" />
+                              <ComboBox fx:id="comboBoxOutCold2" layoutX="572.0" layoutY="196.0" prefHeight="32.0" prefWidth="178.0" promptText="Selet" />
+                              <Label layoutX="45.0" layoutY="198.0" prefHeight="27.0" prefWidth="88.0" text="อาหาร">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="450.0" layoutY="197.0" prefHeight="27.0" prefWidth="88.0" text="อาหาร">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="เช็คของในตู้">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #b8ffba;">
+                           <children>
+                              <Button fx:id="View6" layoutX="173.0" layoutY="310.0" mnemonicParsing="false" onAction="#View6" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="View2" layoutX="173.0" layoutY="69.0" mnemonicParsing="false" onAction="#View2" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="View3" layoutX="41.0" layoutY="180.0" mnemonicParsing="false" onAction="#View3" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="View4" layoutX="173.0" layoutY="180.0" mnemonicParsing="false" onAction="#View4" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="View5" layoutX="41.0" layoutY="310.0" mnemonicParsing="false" onAction="#View5" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="View1" layoutX="41.0" layoutY="69.0" mnemonicParsing="false" onAction="#View1" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="ViewCold1" layoutX="41.0" layoutY="461.0" mnemonicParsing="false" onAction="#ViewCold1" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="ViewCold2" layoutX="173.0" layoutY="461.0" mnemonicParsing="false" onAction="#ViewCold2" prefHeight="38.0" prefWidth="70.0" text="ดู">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="29.0" layoutY="24.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 1">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="161.0" layoutY="24.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 2">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="133.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 3">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="253.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 5">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="29.0" layoutY="395.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เเข็ง 1">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="161.0" layoutY="133.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 4">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="161.0" layoutY="253.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เย็น 6">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="161.0" layoutY="395.0" prefHeight="33.0" prefWidth="94.0" text="ช่องเเช่เเข็ง 2 ">
+                                 <font>
+                                    <Font name="Angsana New" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="View" layoutX="267.0" layoutY="27.0" prefHeight="453.0" prefWidth="581.0">
+                                <columns>
+                                  <TableColumn fx:id="ViewName" text="ชื่อ" />
+                                  <TableColumn fx:id="ViewType" prefWidth="87.0" text="ประเภท" />
+                                    <TableColumn fx:id="ViewAmount" prefWidth="71.0" text="จำนวน" />
+                                    <TableColumn fx:id="ViewUnit" prefWidth="108.0" text="หน่วย" />
+                                    <TableColumn fx:id="ViewTime" prefWidth="91.0" text="จำนวนวันที่เก็บ" />
+                                    <TableColumn fx:id="ViewExp" prefWidth="108.0" text="วันหมดอายุ" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="Back6" layoutX="773.0" layoutY="485.0" mnemonicParsing="false" onAction="#Back6" prefHeight="34.0" prefWidth="87.0" text="Back" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
