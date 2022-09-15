@@ -13,4 +13,4 @@
 # ผู้จัดทำ
 นาย เจษฎากรภ มณี
 
-6110450707[6110450707.pdf](https://github.com/winsoul2/Refrigerator/files/9577264/6110450707.pdf)
+![image](https://user-images.githubusercontent.com/57086365/190460551-d147bb58-f497-4a6f-a602-03033dea2b23.png)
